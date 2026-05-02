@@ -1,9 +1,11 @@
 package net.rev.marsarmor.registeries;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,9 +23,11 @@ public class MarsArmorBlocks {
     public static final RegistryObject<Block> RAW_AURIC_BLOCK = registerBlock("raw_auric_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> AURIC_ORE = registerBlock("auric_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).sound(SoundType.AMETHYST)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
     public static final RegistryObject<Block> DEEPSLATE_AURIC_ORE = registerBlock("deepslate_auric_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE).sound(SoundType.AMETHYST)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
     public static final RegistryObject<Block> AURIC_BLOCK = registerBlock("auric_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 

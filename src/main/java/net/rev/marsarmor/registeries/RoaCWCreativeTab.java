@@ -28,7 +28,7 @@ public class RoaCWCreativeTab {
                 output.accept(MarsArmorBlocks.DEEPSLATE_AURIC_ORE.get());
                 output.accept(MarsArmorBlocks.RAW_AURIC_BLOCK.get());
                 output.accept(MarsArmorBlocks.AURIC_BLOCK.get());
-                output.accept(MarsItems.RAW_AURIC_INGOT.get());
+                output.accept(MarsItems.RAW_AURIC.get());
                 output.accept(MarsItems.AURIC_INGOT.get());
                 output.accept(MarsItems.CHARGED_AURIC_INGOT.get());
                 output.accept(MarsItems.FRIED_CHICKEN.get());
