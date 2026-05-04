@@ -11,30 +11,34 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-import net.rev.marsarmor.MarsArmor;
-import net.rev.marsarmor.registeries.MarsArmorBlocks;
-import org.antlr.v4.tool.Rule;
+import net.rev.marsarmor.ROACW;
+import net.rev.marsarmor.registeries.ROACWBlocks;
 
-import java.io.ObjectInputFilter;
 import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_AURIC_ORE_KEY = registerKey("auric_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RAW_AURIC_BLOCK_KEY = registerKey("raw_auric_block");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplacables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> overworldAuricOres = List.of(OreConfiguration.target(stoneReplaceable,
-                MarsArmorBlocks.AURIC_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplacables, MarsArmorBlocks.DEEPSLATE_AURIC_ORE.get().defaultBlockState()));
+                ROACWBlocks.AURIC_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplacables, ROACWBlocks.DEEPSLATE_AURIC_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> rawAuric = List.of(
+                OreConfiguration.target(deepslateReplacables,
+                        ROACWBlocks.RAW_AURIC_BLOCK.get().defaultBlockState())
+        );
 
-        register(context, OVERWORLD_AURIC_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAuricOres, 9));
+        register(context, OVERWORLD_AURIC_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAuricOres, 4));
+        register(context, OVERWORLD_RAW_AURIC_BLOCK_KEY, Feature.ORE, new OreConfiguration(rawAuric, 3));
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MarsArmor.MODID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ROACW.MODID, name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,

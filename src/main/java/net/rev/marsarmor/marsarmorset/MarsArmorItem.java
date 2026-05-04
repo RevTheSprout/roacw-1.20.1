@@ -13,7 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.rev.marsarmor.registeries.MarsArmorMaterials;
+import net.rev.marsarmor.registeries.ROACWArmorMaterials;
 import net.rev.marsarmor.registeries.MarsRarityColorHelp;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 public class MarsArmorItem extends ImbuableChestplateArmorItem {
 
     public MarsArmorItem(Type type, Properties settings) {
-        super(MarsArmorMaterials.MARS_ARMOR, type, settings, withManaAndSpellPowerAttribute(125, 0.05));
+        super(ROACWArmorMaterials.MARS_ARMOR, type, settings, withManaAndSpellPowerAttribute(125, 0.05));
     }
 
     @Override

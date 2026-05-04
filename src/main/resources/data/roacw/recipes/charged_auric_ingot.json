@@ -1,0 +1,28 @@
+{
+  "type": "crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "traveloptics:withered_excrucis"
+    },
+    {
+      "item": "irons_spellbooks:lightning_bottle"
+    },
+    {
+      "item": "roacw:auric_ingot"
+    },
+    {
+      "item": "roacw:auric_ingot"
+    },
+    {
+      "item": "roacw:auric_ingot"
+    },
+    {
+      "item": "roacw:auric_ingot"
+    }
+  ],
+  "result": {
+    "item": "roacw:charged_auric_ingot",
+    "count": 4
+  }
+}

@@ -7,31 +7,31 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import net.rev.marsarmor.MarsArmor;
+import net.rev.marsarmor.ROACW;
 
 public class RoaCWCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MarsArmor.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ROACW.MODID);
 
-    public static final RegistryObject<CreativeModeTab> ROACW_ITEMS = CREATIVE_MODE_TAB.register("mars_armor", () -> CreativeModeTab.builder().icon(()-> new ItemStack(MarsItems.AURIC_TESLA_ROYAL_HELM.get()))
-            .title(Component.translatable("creativetab.mars_armor"))
+    public static final RegistryObject<CreativeModeTab> ROACW_ITEMS = CREATIVE_MODE_TAB.register("roacw", () -> CreativeModeTab.builder().icon(()-> new ItemStack(ROACWItems.AURIC_TESLA_ROYAL_HELM.get()))
+            .title(Component.translatable("creativetab.roacw"))
             .displayItems((itemDisplayParameters, output) -> {
-                output.accept(MarsItems.MARS_VISOR.get());
-                output.accept(MarsItems.MARS_ENGINE.get());
-                output.accept(MarsItems.MARS_LEG_GUARDS.get());
-                output.accept(MarsItems.MARS_BOOSTERS.get());
-                output.accept(MarsItems.AURIC_TESLA_ROYAL_HELM.get());
-                output.accept(MarsItems.AURIC_TESLA_CUIRASS.get());
-                output.accept(MarsItems.AURIC_TESLA_LEGGINGS.get());
-                output.accept(MarsItems.AURIC_TESLA_GREAVES.get());
-                output.accept(MarsArmorBlocks.AURIC_ORE.get());
-                output.accept(MarsArmorBlocks.DEEPSLATE_AURIC_ORE.get());
-                output.accept(MarsArmorBlocks.RAW_AURIC_BLOCK.get());
-                output.accept(MarsArmorBlocks.AURIC_BLOCK.get());
-                output.accept(MarsItems.RAW_AURIC.get());
-                output.accept(MarsItems.AURIC_INGOT.get());
-                output.accept(MarsItems.CHARGED_AURIC_INGOT.get());
-                output.accept(MarsItems.FRIED_CHICKEN.get());
+                output.accept(ROACWItems.MARS_VISOR.get());
+                output.accept(ROACWItems.MARS_ENGINE.get());
+                output.accept(ROACWItems.MARS_LEG_GUARDS.get());
+                output.accept(ROACWItems.MARS_BOOSTERS.get());
+                output.accept(ROACWItems.AURIC_TESLA_ROYAL_HELM.get());
+                output.accept(ROACWItems.AURIC_TESLA_CUIRASS.get());
+                output.accept(ROACWItems.AURIC_TESLA_LEGGINGS.get());
+                output.accept(ROACWItems.AURIC_TESLA_GREAVES.get());
+                output.accept(ROACWBlocks.AURIC_ORE.get());
+                output.accept(ROACWBlocks.DEEPSLATE_AURIC_ORE.get());
+                output.accept(ROACWBlocks.RAW_AURIC_BLOCK.get());
+                output.accept(ROACWBlocks.AURIC_BLOCK.get());
+                output.accept(ROACWItems.RAW_AURIC.get());
+                output.accept(ROACWItems.AURIC_INGOT.get());
+                output.accept(ROACWItems.CHARGED_AURIC_INGOT.get());
+                output.accept(ROACWItems.FRIED_CHICKEN.get());
             })
             .build());
 

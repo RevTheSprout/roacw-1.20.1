@@ -1,8 +1,8 @@
 {
   "values": [
-    "mars_armor:auric_block",
-    "mars_armor:raw_auric_block",
-    "mars_armor:auric_ore",
-    "mars_armor:deepslate_auric_ore"
+    "roacw:auric_block",
+    "roacw:raw_auric_block",
+    "roacw:auric_ore",
+    "roacw:deepslate_auric_ore"
   ]
 }

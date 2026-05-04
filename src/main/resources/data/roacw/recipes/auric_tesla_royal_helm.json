@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ATA",
+    "ISC",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "roacw:charged_auric_ingot"
+    },
+    "I": {
+      "item": "cataclysm:ignitium_helmet"
+    },
+    "C": {
+      "item": "cataclysm:cursium_helmet"
+    },
+    "S": {
+      "item": "traveloptics:last_glow"
+    },
+    "T": {
+      "tag": "roacw:craftable_with_auric_helm"
+    }
+  },
+
+  "result": {
+    "item": "roacw:auric_tesla_royal_helm"
+  }
+}

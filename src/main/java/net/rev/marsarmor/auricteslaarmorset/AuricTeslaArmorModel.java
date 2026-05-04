@@ -1,8 +1,7 @@
 package net.rev.marsarmor.auricteslaarmorset;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rev.marsarmor.MarsArmor;
-import net.rev.marsarmor.marsarmorset.MarsArmorItem;
+import net.rev.marsarmor.ROACW;
 import software.bernie.geckolib.model.GeoModel;
 
 public class AuricTeslaArmorModel extends GeoModel<AuricTeslaArmorItem> {
@@ -10,14 +9,14 @@ public class AuricTeslaArmorModel extends GeoModel<AuricTeslaArmorItem> {
     }
 
     public ResourceLocation getModelResource(AuricTeslaArmorItem object) {
-        return ResourceLocation.fromNamespaceAndPath(MarsArmor.MODID, "geo/item/armor/auric_tesla_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(ROACW.MODID, "geo/item/armor/auric_tesla_armor.geo.json");
     }
 
     public ResourceLocation getTextureResource(AuricTeslaArmorItem object) {
-        return ResourceLocation.fromNamespaceAndPath(MarsArmor.MODID, "textures/item/armor/auric_tesla_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(ROACW.MODID, "textures/item/armor/auric_tesla_armor.png");
     }
 
     public ResourceLocation getAnimationResource(AuricTeslaArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(MarsArmor.MODID, "animations/auric_tesla_armor.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(ROACW.MODID, "animations/auric_tesla_armor.animation.json");
     }
 }

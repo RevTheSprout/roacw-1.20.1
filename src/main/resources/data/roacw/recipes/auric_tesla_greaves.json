@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "ISC",
+    "ATA"
+  ],
+  "key": {
+    "A": {
+      "item": "roacw:charged_auric_ingot"
+    },
+    "I": {
+      "item": "cataclysm:ignitium_boots"
+    },
+    "C": {
+      "item": "cataclysm:cursium_boots"
+    },
+    "S": {
+      "item": "traveloptics:last_glow"
+    },
+    "T": {
+      "item": "cataclysm_spellbooks:excelsius_greaves"
+    }
+  },
+
+  "result": {
+    "item": "roacw:auric_tesla_greaves"
+  }
+}

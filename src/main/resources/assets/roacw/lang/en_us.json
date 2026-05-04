@@ -1,0 +1,21 @@
+{
+  "item.roacw.mars_visor": "XG-07 Mars Visor",
+  "item.roacw.mars_engine": "XG-07 Mars Engine",
+  "item.roacw.mars_leg_guards": "XG-07 Mars Leg Guards",
+  "item.roacw.mars_boosters": "XG-07 Mars Boosters",
+  "item.roacw.mars_helmet.desc": "Putting on this armor, you feel a power emanating from it that you've never felt before, something precise yet violent, like an automaton designed for carnage.",
+  "item.roacw.auric_tesla_royal_helm": "Auric Tesla Royal Helm",
+  "item.roacw.auric_tesla_cuirass": "Auric Tesla Cuirass",
+  "item.roacw.auric_tesla_leggings": "Auric Tesla Leggings",
+  "item.roacw.auric_tesla_greaves": "Auric Tesla Greaves",
+  "item.roacw.auric_tesla_armor.desc": "After finding all of the pieces to forge such a masterpiece, this armor makes you feel unstoppable, as if the entire world will bow to you.",
+  "item.roacw.raw_auric": "Raw Auric",
+  "item.roacw.auric_ingot": "Auric Ingot",
+  "item.roacw.charged_auric_ingot": "Charged Auric Ingot",
+  "item.roacw.fried_chicken": "Fried Chicken",
+  "block.roacw.raw_auric_block": "Block of Raw Auric",
+  "block.roacw.auric_ore": "Auric Ore",
+  "block.roacw.deepslate_auric_ore": "Deepslate Auric Ore",
+  "block.roacw.auric_block": "Auric Block",
+  "creativetab.roacw": "RoaCW Items"
+}

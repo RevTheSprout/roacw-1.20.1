@@ -6,13 +6,13 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.rev.marsarmor.MarsArmor;
+import net.rev.marsarmor.ROACW;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
 public class MarsArmorLayer extends GeoRenderLayer<MarsArmorItem> {
-    private static final ResourceLocation LAYER = ResourceLocation.fromNamespaceAndPath(MarsArmor.MODID, "textures/item/armor/mars_armor_glowmask.png");
+    private static final ResourceLocation LAYER = ResourceLocation.fromNamespaceAndPath(ROACW.MODID, "textures/item/armor/mars_armor_glowmask.png");
 
     public MarsArmorLayer(GeoRenderer<MarsArmorItem> renderer) {
         super(renderer);

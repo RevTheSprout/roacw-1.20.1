@@ -9,7 +9,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.rev.marsarmor.registeries.MarsArmorMaterials;
+import net.rev.marsarmor.registeries.ROACWArmorMaterials;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class AuricTeslaArmorItem extends ImbuableChestplateArmorItem {
     public AuricTeslaArmorItem(Type type, Properties settings) {
-        super(MarsArmorMaterials.AURIC_TESLA_ARMOR, type, settings, withManaAndSpellPowerAttribute(125, 0.05));
+        super(ROACWArmorMaterials.AURIC_TESLA_ARMOR, type, settings, withManaAndSpellPowerAttribute(125, 0.05));
     }
 
     @Override

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ATA",
+    "ISC",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "roacw:charged_auric_ingot"
+    },
+    "I": {
+      "item": "cataclysm:ignitium_leggings"
+    },
+    "C": {
+      "item": "cataclysm:cursium_leggings"
+    },
+    "S": {
+      "item": "traveloptics:last_glow"
+    },
+    "T": {
+      "item": "cataclysm_spellbooks:excelsius_leggings"
+    }
+  },
+
+  "result": {
+    "item": "roacw:auric_tesla_leggings"
+  }
+}

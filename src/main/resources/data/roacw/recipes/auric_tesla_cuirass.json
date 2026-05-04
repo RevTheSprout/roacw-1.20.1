@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "A A",
+    "ISC",
+    "ATA"
+  ],
+  "key": {
+    "A": {
+      "item": "roacw:charged_auric_ingot"
+    },
+    "I": {
+      "item": "cataclysm:ignitium_chestplate"
+    },
+    "C": {
+      "item": "cataclysm:cursium_chestplate"
+    },
+    "S": {
+      "item": "traveloptics:last_glow"
+    },
+    "T": {
+      "tag": "roacw:craftable_with_auric_chest"
+    }
+  },
+
+  "result": {
+    "item": "roacw:auric_tesla_cuirass"
+  }
+}

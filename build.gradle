@@ -163,6 +163,9 @@ dependencies {
     implementation fg.deobf("curse.maven:alexs-caves-924854:5848216")
     implementation fg.deobf("curse.maven:citadel-331936:7476570")
     implementation fg.deobf("curse.maven:placebo-283644:6274231")
+    implementation fg.deobf("curse.maven:gtbcs-geomancy-plus-1352485:7580390")
+    implementation fg.deobf("curse.maven:gtbcs-spelllib-1194714:7584987")
+    implementation fg.deobf("curse.maven:mowzies-mobs-250498:7815705")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

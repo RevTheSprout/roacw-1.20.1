@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TWT",
+    "PEP",
+    "LIL"
+  ],
+  "key": {
+    "T": {
+      "item": "cataclysm_spellbooks:technomancy_rune"
+    },
+    "W": {
+      "item": "cataclysm:witherite_ingot"
+    },
+    "P": {
+      "item": "traveloptics:plasma_power_cell"
+    },
+    "L": {
+      "item": "irons_spellbooks:lightning_rune"
+    },
+    "E": {
+      "item": "cataclysm_spellbooks:excelsius_leggings"
+    },
+    "I": {
+      "item": "roacw:charged_auric_ingot"
+    }
+  },
+
+  "result": {
+    "item": "roacw:mars_leg_guards"
+  }
+}

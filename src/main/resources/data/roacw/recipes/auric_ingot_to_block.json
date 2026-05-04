@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "roacw:auric_ingot"
+    }
+  },
+
+  "result": {
+    "item": "roacw:auric_block"
+  }
+}

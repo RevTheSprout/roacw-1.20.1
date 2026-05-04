@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "roacw:raw_auric_block"
+  },
+  "result": "roacw:raw_auric",
+  "count": 9
+}
