@@ -28,7 +28,7 @@ public class RoaCWCreativeTab {
                 output.accept(ROACWBlocks.DEEPSLATE_AURIC_ORE.get());
                 output.accept(ROACWBlocks.RAW_AURIC_BLOCK.get());
                 output.accept(ROACWBlocks.AURIC_BLOCK.get());
-                output.accept(ROACWItems.RAW_AURIC.get());
+                output.accept(ROACWItems.RAW_AURIC_CHUNK.get());
                 output.accept(ROACWItems.AURIC_INGOT.get());
                 output.accept(ROACWItems.CHARGED_AURIC_INGOT.get());
                 output.accept(ROACWItems.FRIED_CHICKEN.get());

@@ -14,7 +14,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rev.roacw.registeries.ROACWBlocks;
 import net.rev.roacw.registeries.ROACWItems;
 import net.rev.roacw.registeries.RoaCWCreativeTab;
+import net.rev.roacw.stasiscurse.StatisCurseCurioRenderer;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ROACW.MODID)
@@ -66,6 +68,9 @@ public class ROACW
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+            CuriosRendererRegistry.register(
+                    ROACWItems.STATIS_CURSE.get(),
+                    StatisCurseCurioRenderer::new
         }
     }
 }
