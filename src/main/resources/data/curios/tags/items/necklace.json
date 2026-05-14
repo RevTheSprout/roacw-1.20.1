@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "roacw:statis_curse"
+    "roacw:statis_curse",
+    "roacw:evasion_scarf"
   ]
 }

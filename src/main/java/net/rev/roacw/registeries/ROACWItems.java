@@ -9,9 +9,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rev.roacw.ROACW;
-import net.rev.roacw.auricteslaarmorset.AuricTeslaArmorItem;
+import net.rev.roacw.items.armor.auricteslaarmorset.AuricTeslaArmorItem;
+import net.rev.roacw.items.armor.marsarmorset.MarsArmorItem;
+import net.rev.roacw.items.curios.evasion_scarf.EvasionScarf;
 import net.rev.roacw.items.curios.stasis_curse.StatisCurse;
-import net.rev.roacw.marsarmorset.MarsArmorItem;
 
 import java.util.Collection;
 
@@ -47,6 +48,7 @@ public class ROACWItems {
 
     // Statis Curse
     public static final RegistryObject<Item> STATIS_CURSE = ITEMS.register("statis_curse", StatisCurse::new);
+    public static final RegistryObject<Item> EVASION_SCARF = ITEMS.register("evasion_scarf", EvasionScarf::new);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

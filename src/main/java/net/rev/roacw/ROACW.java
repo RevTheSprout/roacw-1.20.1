@@ -12,7 +12,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rev.roacw.items.curios.GenericCurioRenderer;
+import net.rev.roacw.items.curios.evasion_scarf.EvasionScarf;
+import net.rev.roacw.items.curios.evasion_scarf.EvasionScarfCurioRenderer;
 import net.rev.roacw.items.curios.stasis_curse.StatisCurse;
+import net.rev.roacw.items.curios.stasis_curse.StatisCurseCurioRenderer;
 import net.rev.roacw.registeries.ROACWBlocks;
 import net.rev.roacw.registeries.ROACWItems;
 import net.rev.roacw.registeries.RoaCWCreativeTab;
@@ -70,7 +73,9 @@ public class ROACW
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             ROACWItems.getROACWItems().stream().filter(item -> item.get() instanceof StatisCurse)
-                    .forEach((item) -> CuriosRendererRegistry.register(item.get(), GenericCurioRenderer::new));
+                    .forEach((item) -> CuriosRendererRegistry.register(item.get(), StatisCurseCurioRenderer::new));
+            ROACWItems.getROACWItems().stream().filter(item -> item.get() instanceof EvasionScarf)
+                    .forEach((item) -> CuriosRendererRegistry.register(item.get(), EvasionScarfCurioRenderer::new));
         }
     }
 }

@@ -1,4 +1,4 @@
-package net.rev.roacw.items.curios.stasis_curse;
+package net.rev.roacw.items.curios.evasion_scarf;
 
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.rev.roacw.items.curios.stasis_curse.StatisCurseRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
@@ -19,10 +20,10 @@ import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import java.util.function.Consumer;
 
-public class StatisCurse extends CurioBaseItem implements ICurioItem, GeoItem {
+public class EvasionScarf extends CurioBaseItem implements ICurioItem, GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public StatisCurse() {
+    public EvasionScarf() {
         super(ItemPropertiesHelper
                 .equipment()
                 .stacksTo(1)
@@ -33,11 +34,11 @@ public class StatisCurse extends CurioBaseItem implements ICurioItem, GeoItem {
 
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private StatisCurseRenderer renderer;
+            private EvasionScarfRenderer renderer;
 
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                 if (this.renderer == null) {
-                    this.renderer = new StatisCurseRenderer();
+                    this.renderer = new EvasionScarfRenderer();
                 }
 
                 return this.renderer;
@@ -63,7 +64,7 @@ public class StatisCurse extends CurioBaseItem implements ICurioItem, GeoItem {
         return true;
     }
 
-    private PlayState idlePredicate(AnimationState<StatisCurse> event) {
+    private PlayState idlePredicate(AnimationState<EvasionScarf> event) {
         event.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
         return PlayState.CONTINUE;
     }

@@ -1,4 +1,4 @@
-package net.rev.roacw.items.curios.stasis_curse;
+package net.rev.roacw.items.curios.evasion_scarf;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -18,7 +18,7 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.client.ICurioRenderer;
 
 @OnlyIn(Dist.CLIENT)
-public class StatisCurseCurioRenderer implements ICurioRenderer {
+public class EvasionScarfCurioRenderer implements ICurioRenderer {
     ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
 
     @Override
@@ -30,7 +30,7 @@ public class StatisCurseCurioRenderer implements ICurioRenderer {
             poseStack.pushPose();
             humanoidModel.body.translateAndRotate(poseStack);
             // x = sideways, y = up/down, z = forward/back
-            poseStack.translate(0.0D, 0.22D, 0.0D);
+            poseStack.translate(0.0D, 0.1D, 0.0D);
             poseStack.scale(1f, 1f, 1f);
             poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
 
