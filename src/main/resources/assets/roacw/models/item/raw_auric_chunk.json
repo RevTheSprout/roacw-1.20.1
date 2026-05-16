@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "roacw:item/raw_auric"
+    "layer0": "roacw:item/raw_auric_chunk"
   }
 }

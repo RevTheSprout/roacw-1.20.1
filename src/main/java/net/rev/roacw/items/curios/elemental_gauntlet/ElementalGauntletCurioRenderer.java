@@ -1,4 +1,4 @@
-package net.rev.roacw.items.curios.evasion_scarf;
+package net.rev.roacw.items.curios.elemental_gauntlet;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -18,7 +18,7 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.client.ICurioRenderer;
 
 @OnlyIn(Dist.CLIENT)
-public class EvasionScarfCurioRenderer implements ICurioRenderer {
+public class ElementalGauntletCurioRenderer implements ICurioRenderer {
     ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
 
     @Override
@@ -28,12 +28,11 @@ public class EvasionScarfCurioRenderer implements ICurioRenderer {
             var humanoidModel = (HumanoidModel<LivingEntity>) renderLayerParent.getModel();
 
             poseStack.pushPose();
-            humanoidModel.body.translateAndRotate(poseStack);
+            humanoidModel.rightArm.translateAndRotate(poseStack);
             // x = sideways, y = up/down, z = forward/back
-            poseStack.translate(0.0D, 0.08D, 0.0D);
-            poseStack.scale(1f, 1f, 1f);
-            poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
-
+            poseStack.translate(0.0D, 0.5D, 0.0D);
+            poseStack.scale(1.1f, 1.1f, 1.1f);
+            poseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
 
             itemRenderer.renderStatic(stack, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, renderTypeBuffer, null, 0);
             poseStack.popPose();
