@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:item/handheld",
+    "loader": "forge:separate_transforms",
+    "base": {
+        "parent": "roacw:item/murasama_blade_held"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "roacw:item/murasama_blade_gui"
+        }
+    }
+}
