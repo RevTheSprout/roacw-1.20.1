@@ -1,62 +1,53 @@
 package net.kamaarion.roacw.items.weapons;
 
 import com.github.L_Ender.cataclysm.init.ModItems;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.item.weapons.ExtendedWeaponTier;
+import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
+import io.redspace.ironsspellbooks.item.weapons.StaffTier;
+import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.kamaarion.roacw.registeries.ROACWAttributeRegistry;
 import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
 
-public enum ROACWWeaponTiers implements Tier {
-        // Murasama
-        MURASAMABLADE(3, 1681, -1.3f, 14.5F, 15, () -> Ingredient.of(ModItems.WITHERITE_INGOT.get())),
-        ;
+public class ROACWWeaponTiers extends StaffTier implements IronsWeaponTier {
+    public static ROACWWeaponTiers MURASAMABLADE = new ROACWWeaponTiers(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.EPIC), 9, -3,
+            new AttributeContainer(ROACWAttributeRegistry.EXO_MAGIC_POWER, .15, AttributeModifier.Operation.MULTIPLY_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.MULTIPLY_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.MULTIPLY_BASE),
+            new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .15, AttributeModifier.Operation.MULTIPLY_BASE)
+    );
 
-        private final int level;
-        private final int uses;
-        private final float speed;
-        private final float damage;
-        private final int enchantmentValue;
-        private final LazyLoadedValue<Ingredient> repairIngredient;
+    float damage;
+    float speed;
+    AttributeContainer[] attributes;
 
-        ROACWWeaponTiers(int level, int uses, float speed, float damage, int enchantmentValue, Supplier<Ingredient> repairIngredient)
-        {
-            this.level = level;
-            this.uses = uses;
-            this.speed = speed;
-            this.damage = damage;
-            this.enchantmentValue = enchantmentValue;
-            this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
-        }
 
-        @Override
-        public int getUses() {
-            return this.uses;
-        }
 
-        @Override
-        public float getSpeed() {
-            return this.speed;
-        }
+    public ROACWWeaponTiers(Item.Properties rarity, float damage, float speed, AttributeContainer... attributes) {
+        super(damage, speed, attributes);
+        this.damage = damage;
+        this.speed = speed;
+        this.attributes = attributes;
+    }
 
-        @Override
-        public float getAttackDamageBonus() {
-            return this.damage;
-        }
+    public float getAttackDamageBonus() {
+        return this.damage;
+    }
 
-        @Override
-        public int getLevel() {
-            return this.level;
-        }
+    public float getSpeed() {
+        return this.speed;
+    }
 
-        @Override
-        public int getEnchantmentValue() {
-            return this.enchantmentValue;
-        }
-
-        @Override
-        public Ingredient getRepairIngredient() {
-            return this.repairIngredient.get();
-        }
+    public AttributeContainer[] getAdditionalAttributes() {
+        return this.attributes;
+    }
 }
